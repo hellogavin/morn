@@ -21,6 +21,10 @@ package morn.core.managers {
 			_shape.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
 		
+		public function removeTimer():void
+		{
+		   	_shape.removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+		}
 		private function onEnterFrame(e:Event):void {
 			_currFrame++;
 			_currTimer = getTimer();
